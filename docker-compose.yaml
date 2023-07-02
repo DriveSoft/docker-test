@@ -1,0 +1,9 @@
+services:
+  app:
+    build: .
+    container_name: hello-world-api
+    command: nodemon -L server.js localhost 80
+    ports:
+      - 3000:80
+    volumes:
+      - .:/app
